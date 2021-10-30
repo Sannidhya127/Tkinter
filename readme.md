@@ -1,2 +1,2 @@
 # Tkinter
-files while I learning tkinter
+files while learning tkinter
