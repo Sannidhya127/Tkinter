@@ -1,6 +1,7 @@
 import collections
 from tkinter import *
 from typing import Collection
+import importlib
 
 root = Tk()
 
@@ -37,6 +38,7 @@ def deleteOneChar():
     lastChar = data[-1]
     entryWidget.delete(lastChar,END)
     print("Deleted last character. Refresh required")
+    importlib.reload()
 
 # Defining the buttons
 
