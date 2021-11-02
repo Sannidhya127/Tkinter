@@ -14,7 +14,9 @@ entryWidget.grid(row=0,column=0,columnspan=3, padx=10, pady=10)
 
 def button_click(number):
     # entryWidget.delete(0, END)
-    entryWidget.insert(0,number)
+    current = entryWidget.get()
+    entryWidget.delete(0, END)
+    entryWidget.insert(0,str(current) + str(number))
 
 
 def button_equal():
@@ -23,6 +25,9 @@ def button_equal():
     sum = int(nums[0]) + int(nums[1])
     entryWidget.delete(0, END)
     entryWidget.insert(0,sum)
+
+def button_clear():
+    entryWidget.delete(0, END)
 
 # Defining the buttons
 
@@ -38,7 +43,7 @@ button_9 = Button(root, text=9, padx=40, pady=20, command=lambda: button_click(9
 button_0 = Button(root, text=0, padx=40, pady=20, command=lambda: button_click(0))
 Button_add = Button(root, text="+", padx=39, pady=20,command=lambda: button_click("+"))
 Button_equal = Button(root, text="=", padx=91, pady=20,command=lambda: button_equal())
-Button_cls = Button(root, text="cls", padx=79, pady=20,command=lambda: button_click())
+Button_cls = Button(root, text="cls", padx=79, pady=20,command=lambda: button_clear())
 
 # Adding buttons to screen and aligning them
 
