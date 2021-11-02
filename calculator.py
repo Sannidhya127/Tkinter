@@ -1,7 +1,6 @@
 import collections
 from tkinter import *
 from typing import Collection
-import importlib
 
 root = Tk()
 
@@ -38,7 +37,6 @@ def deleteOneChar():
     lastChar = data[-1]
     entryWidget.delete(lastChar,END)
     print("Deleted last character. Refresh required")
-    importlib.reload()
 
 # Defining the buttons
 
@@ -54,8 +52,8 @@ button_9 = Button(root, text=9, padx=40, pady=20, command=lambda: button_click(9
 button_0 = Button(root, text=0, padx=40, pady=20, command=lambda: button_click(0))
 Button_add = Button(root, text="+", padx=39, pady=20,command=lambda: button_click("+"))
 Button_equal = Button(root, text="=", padx=91, pady=20,command=lambda: button_equal())
-Button_cls = Button(root, text="cls", padx=50, pady=20,command=lambda: button_clear())
-Button_ClearOneAtATime= Button(root, text="←", padx=20, pady=20, command=deleteOneChar)
+Button_cls = Button(root, text="cls", padx=79, pady=20,command=lambda: button_clear())
+# Button_ClearOneAtATime= Button(root, text="←", padx=20, pady=20, command=deleteOneChar)
 
 # Adding buttons to screen and aligning them
 
@@ -77,8 +75,8 @@ button_9.grid(row=1,column=2)
 button_0.grid(row=4,column=0)
 Button_add.grid(row=5, column=0)
 Button_equal.grid(row=5,column=1, columnspan=2)
-Button_cls.grid(row=4, column=1)
-Button_ClearOneAtATime.grid(row=4, column=2)
+Button_cls.grid(row=4, column=1,columnspan=2)
+# Button_ClearOneAtATime.grid(row=4, column=2)
 
 
 
