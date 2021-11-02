@@ -17,6 +17,7 @@ def button_click(number):
     current = entryWidget.get()
     entryWidget.delete(0, END)
     entryWidget.insert(0,str(current) + str(number))
+    print(f"{number} entered in field entryWidget")
 
 
 def button_equal():
@@ -25,14 +26,17 @@ def button_equal():
     sum = int(nums[0]) + int(nums[1])
     entryWidget.delete(0, END)
     entryWidget.insert(0,sum)
+    print(f"Calculated sum of {nums[0]} and {nums[1]} to be {sum}")
 
 def button_clear():
     entryWidget.delete(0, END)
+    print("Ran command Clear Screen")
 
 def deleteOneChar():
     data = entryWidget.get()
     lastChar = data[-1]
     entryWidget.delete(lastChar,END)
+    print("Deleted last character. Refresh required")
 
 # Defining the buttons
 
