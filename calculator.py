@@ -12,6 +12,14 @@ entryWidget.grid(row=0,column=0,columnspan=3, padx=10, pady=10)
 
 
 
+def Detect():
+    data = entryWidget.get()
+    if "+" in data:
+        button_equalAdd()
+    else:
+        pass
+
+
 def button_click(number):
     # entryWidget.delete(0, END)
     current = entryWidget.get()
@@ -20,7 +28,7 @@ def button_click(number):
     print(f"{number} entered in field entryWidget")
 
 
-def button_equal():
+def button_equalAdd():
     param = entryWidget.get()
     nums = param.split("+")
     sum = int(nums[0]) + int(nums[1])
@@ -51,8 +59,8 @@ button_8 = Button(root, text=8, padx=40, pady=20, command=lambda: button_click(8
 button_9 = Button(root, text=9, padx=40, pady=20, command=lambda: button_click(9))
 button_0 = Button(root, text=0, padx=40, pady=20, command=lambda: button_click(0))
 Button_add = Button(root, text="+", padx=39, pady=20,command=lambda: button_click("+"))
-Button_equal = Button(root, text="=", padx=91, pady=20,command=lambda: button_equal())
-Button_cls = Button(root, text="cls", padx=79, pady=20,command=lambda: button_clear())
+Button_equal = Button(root, text="=", padx=91, pady=20,command=lambda: button_equalAdd())
+Button_cls = Button(root, text="AC", padx=79, pady=20,command=lambda: button_clear())
 # Button_ClearOneAtATime= Button(root, text="←", padx=20, pady=20, command=deleteOneChar)
 
 # Adding buttons to screen and aligning them
