@@ -6,6 +6,7 @@ root = Tk()
 
 root.title("Calcultor")
 
+root.iconbitmap("icon.ico")
 
 entryWidget = Entry(root, width=35, borderwidth=5)
 entryWidget.grid(row=0,column=0,columnspan=3, padx=10, pady=10)
